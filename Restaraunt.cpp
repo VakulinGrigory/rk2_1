@@ -1,6 +1,6 @@
-#include "Restaurant.h"
+#include "Restaraunt.h"
 
-std::int32_t Restaurant::CookFood() {
+std::int32_t Restaraunt::CookFood() {
     if (isOpened_) {
         if (mediator_) mediator_->FoodIsCooked();
         return price_;
@@ -9,17 +9,17 @@ std::int32_t Restaurant::CookFood() {
     }
 }
 
-std::int32_t Restaurant::AlterPrice(std::int32_t priceChange) {
+std::int32_t Restaraunt::AlterPrice(std::int32_t priceChange) {
     price_ += priceChange;
     return price_;
 }
 
-BusinessMediator* Restaurant::SetBusinessMediator(design::AccessKey<BusinessMediator>, BusinessMediator* mediator) {
+BusinessMediator* Restaraunt::SetBusinessMediator(design::AccessKey<BusinessMediator>, BusinessMediator* mediator) {
     BusinessMediator* old = mediator_;
     mediator_ = mediator;
     return old;
 }
 
-void Restaurant::SetIsOpened(design::AccessKey<BusinessMediator>, bool isOpened) {
+void Restaraunt::SetIsOpened(design::AccessKey<BusinessMediator>, bool isOpened) {
     isOpened_ = isOpened;
 }
