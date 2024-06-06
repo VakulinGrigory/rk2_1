@@ -2,6 +2,7 @@
 #define RESTAURANT_H
 
 #include "BusinessMediator.h"
+#include <cstdint>
 
 class Restaurant {
 public:
@@ -17,3 +18,4 @@ private:
 };
 
 #endif // RESTAURANT_H
+
