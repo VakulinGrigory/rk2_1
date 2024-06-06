@@ -2,14 +2,14 @@
 #include "BusinessMediator.h"
 #include "EstateOwner.h"
 #include "GroceryStore.h"
-#include "Restaraunt.h"
+#include "Restaurant.h"
 
-void BuyFood(Restaraunt& restaraunt) {
-    auto price = restaraunt.CookFood();
+void BuyFood(Restaurant& restaurant) {
+    auto price = restaurant.CookFood();
     if (price >= 0) {
         std::cout << "[BuyFood] The price of food: " << price << std::endl;
     } else {
-        std::cout << "[BuyFood] Restaraunt was closed because groceries are lack." << std::endl;
+        std::cout << "[BuyFood] Restaurant was closed because groceries are lack." << std::endl;
     }
 }
 
@@ -33,31 +33,31 @@ void ChangeEstateRentPrice(EstateOwner& estateOwner, std::int32_t newPrice) {
 int main() {
     EstateOwner estateOwner;
     GroceryStore groceryStore;
-    Restaraunt restaraunt;
+    Restaurant restaurant;
 
-    BusinessMediator mediator(estateOwner, groceryStore, restaraunt);
+    BusinessMediator mediator(estateOwner, groceryStore, restaurant);
 
     SupplyGrocery(groceryStore, 2);
     groceryStore.Sell();
-    BuyFood(restaraunt);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
+    BuyFood(restaurant);
     std::cout << std::endl;
 
     SupplyGrocery(groceryStore, 3);
     ChangeEstateRentPrice(estateOwner, 1000);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
     ChangeEstateRentPrice(estateOwner, 10000);
-    BuyFood(restaraunt;
+    BuyFood(restaurant);
     ChangeEstateRentPrice(estateOwner, 100000);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
     std::cout << std::endl;
 
     SupplyGrocery(groceryStore, 3);
     ChangeGroceryPrice(groceryStore, 100);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
     ChangeEstateRentPrice(estateOwner, 10000);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
     ChangeGroceryPrice(groceryStore, -100);
-    BuyFood(restaraunt);
-    BuyFood(restaraunt);
+    BuyFood(restaurant);
+    BuyFood(restaurant);
 }
