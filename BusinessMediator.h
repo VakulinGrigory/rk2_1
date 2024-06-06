@@ -3,14 +3,6 @@
 
 #include <cstdint>
 
-namespace design {
-    template <typename T>
-    class AccessKey {
-        friend T;
-        AccessKey() {}
-    };
-}
-
 class EstateOwner;
 class GroceryStore;
 class Restaurant;
@@ -31,3 +23,4 @@ private:
 };
 
 #endif // BUSINESS_MEDIATOR_H
+
