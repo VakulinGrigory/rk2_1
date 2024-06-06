@@ -2,7 +2,7 @@
 #include "BusinessMediator.h"
 #include "EstateOwner.h"
 #include "GroceryStore.h"
-#include "Restaurant.h"
+#include "Restaraunt.h"
 
 void BuyFood(Restaurant& restaurant) {
     auto price = restaurant.CookFood();
