@@ -1,4 +1,4 @@
-#include "business.h"
+#include "business.cpp"
 #include "gtest/gtest.h"
 
 TEST(BusinessMediatorTest, GroceryStoreStockChangedTest) {
