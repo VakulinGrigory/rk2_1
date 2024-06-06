@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "BusinessMediator.cpp.cpp"
+#include "BusinessMediator.cpp"
 #include "EstateOwner.cpp"
 #include "GroceryStore.cpp"
 #include "Restaraunt.cpp"
