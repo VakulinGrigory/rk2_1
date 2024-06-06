@@ -2,7 +2,7 @@
 #include "BusinessMediator.cpp"
 #include "EstateOwner.cpp"
 #include "GroceryStore.cpp"
-#include "Restaraunt.cpp"
+#include "Restaurant.cpp"
 
 TEST(BusinessTest, EstateRentPriceChangeTest) {
     EstateOwner estateOwner;
